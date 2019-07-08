@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <link rel="stylesheet" href="assets/stylesheets/proximanova.css">
+    <script src="https://kit.fontawesome.com/137097711c.js"></script>
+</head>
+
+<body>
+    <div id="container">
+
+        <header id="header">
+            <div class="container">
+                <div class="container-1">
+                    <div class="row justify">
+                        <div class="logo">
+                            <a href="#"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuODrOOCpOODpOODvF8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiDQoJIHk9IjBweCIgdmlld0JveD0iMCAwIDEyMiAyMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTIyIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8Zz4NCgkJCTxnPg0KCQkJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik03MC40NjUxNDEzLDEuNDkyMjI3NHYxNi40ODI2NjAzYzAuMDAxMjI4MywwLDAuMDA0MzI1OSwwLjcxODUzODMsMC43MTgyNTQxLDAuNzE4NTM4M2gxLjk2NDYzNzgNCgkJCQkJYzAuNzE2Mzg0OS0wLjAwNDY0NDQsMC43MTM2MDc4LTAuNzE4NTM4MywwLjcxMzYwNzgtMC43MTg1MzgzVjEuNDkyMjI3NGMwLjAwMjc3NzEsMCwwLTAuNzE4NTM3Mi0wLjcxMzYwNzgtMC43MTg1MzcyDQoJCQkJCWgtMS45NjQ2Mzc4QzcwLjQ2NjM2OTYsMC43NzM2OTAyLDcwLjQ2NjM2OTYsMS40OTIyMjc0LDcwLjQ2NTE0MTMsMS40OTIyMjc0eiIvPg0KCQkJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xMDQuNDMzMTQzNiwxNy45NzQ4ODc4bDAuMDAxMjM2LTcuMjY2MjQ4N2MwLTMuMjUxODAzOS0yLjg2MDU5NTctNS4yNDU0MzkxLTQuOTQ4MDM2Mi01LjI0NTQzOTENCgkJCQkJYy0yLjA3NjY2MDIsMC0zLjg0MjMyMzMsMC41Mzk4ODI3LTUuMjAwNzM3LDEuNjQwMDg3MUM5NC4xNjQwNzAxLDcuMjAzMjQ1Niw5My44MjQ5ODkzLDcuMzA2OSw5My44MjQ5ODkzLDcuMDEwNzIxNw0KCQkJCQlsLTAuMDA2MTU2OS0wLjc0OTcxOTFjMCwwLDAtMC43MTQ1MjQ3LTAuNzE1MTU2Ni0wLjcxNDUyNDdoLTEuNjkzNzYzN2MwLDAtMC43MTUxNTY2LDAtMC43MTUxNTY2LDAuNzE0NTI0Nw0KCQkJCQlsLTAuMDAyNDY0MywxMS43MTM4ODUzYzAuMDAyNDY0MywwLjcxODUzODMsMC43MTc2MjA4LDAuNzE4NTM4MywwLjcxNzYyMDgsMC43MTg1MzgzbDEuNjk3NDg2OS0wLjAwMTU0NjkNCgkJCQkJYzAuNzExNDMzNC0wLjAwMzA5NzUsMC43MTE0MzM0LTAuNzE2OTkxNCwwLjcwNzEwNzUtMC43MTY5OTE0bDAuMDAyNDU2Ny01LjcyNDg4NTkNCgkJCQkJYzAuMDAxODY5Mi0xLjU4MTQ4NDgsMS4wNjg3NDA4LTQuMjg0NDAwNSw0LjU4MDI5OTQtNC4yODQ0MDA1YzIuNTA4MjQ3NCwwLDIuOTA4NzA2NywxLjcyNjQ2LDIuOTA4NzA2NywyLjc0MzAzNzcNCgkJCQkJbDAuMDAyNDY0Myw3LjI2NjI0ODdjMCwwLjcxODUzODMsMC43MTcwMjU4LDAuNzEzODkzOSwwLjcxNzAyNTgsMC43MTM4OTM5bDEuNjk1NjI1MywwLjAwNDY0NDQNCgkJCQkJQzEwMy43MjEwODQ2LDE4LjY5MzQyNjEsMTA0LjQzNjg0MzksMTguNjkzNDI2MSwxMDQuNDMzMTQzNiwxNy45NzQ4ODc4eiIvPg0KCQkJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik03NS43MzgzNDk5LDkuMTcyMjA4OGMtMC4wMDQ5Mjg2LDAuMDI0Njc0NC0wLjAwNjE1NjksMC4wNDkzNDc5LTAuMDA2MTU2OSwwLjA3MzQyMTUiLz4NCgkJCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEzLjM3MDk0ODgsOC4wMzA2ODE2YzIuNDQ1NjI1MywwLDQuNDE3Njg2NSwxLjY3OTU3NzgsNC40MjQ3NTg5LDQuMjg5MDQ1Mw0KCQkJCQljMC4wMDUyNDksMi42ODk5NjQzLTEuOTc0MjA1LDQuNDE2MTQxNS00LjQxOTgzMDMsNC40MTYxNDE1Yy0yLjQ0NzQ5NDUsMC00LjMxMTg1OTEtMS45MTkzMDEtNC4zMTE4NTkxLTQuNDUwNzAzNg0KCQkJCQlDMTA5LjA2MDYwNzksOS43ODEyMTU3LDExMS4wODk3NTIyLDguMDMwNjgxNiwxMTMuMzcwOTQ4OCw4LjAzMDY4MTZ6IE0xMTcuNDU3NTgwNiwxNy41NzM1MDkyDQoJCQkJCWMwLjIwNzkzOTEtMC4xNjM4MzkzLDAuNDIyMDczNC0wLjAyOTMxNzksMC40MTgzNDI2LDAuMzQ3MDcyNmMwLDAuMDU0MzA2LDAsMC43NzI4NDQzLDAuNzE3MDE4MSwwLjc3Mjg0NDNoMS42OTUzMTI1DQoJCQkJCWMwLDAsMC43MTE3NDYyLDAsMC43MTE3NDYyLTAuNzE4NTM4M1YxLjQ5MjIyNzRjMC0wLjcxODUzNzItMC43MTE3NDYyLTAuNzE0MjA5LTAuNzExNzQ2Mi0wLjcxNDIwOWgtMS42OTUzMTI1DQoJCQkJCWMwLDAtMC43MTcwMTgxLTAuMDA0MzI4Mi0wLjcyMTk0NjcsMC43MTQyMDlsMC4wMDI0NjQzLDUuMjA1NjY2MWMtMC4wMDQ5Mjg2LDAuMzc2MzkxOS0wLjIwNDg0MTYsMC41MDUzNTItMC40MTIxODU3LDAuMzQ3MDc0DQoJCQkJCWMtNC42MTI5NjA4LTMuNTM0NzEzNy0xMS42MjQ3MDI1LDAtMTEuNjEyMDMsNS4yMzQwMzY0QzEwNS44NjAzMjg3LDE4LjEzMzc2ODEsMTEyLjc3NjEyMywyMS4yODY4NDYyLDExNy40NTc1ODA2LDE3LjU3MzUwOTJ6Ig0KCQkJCQkvPg0KCQkJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik03OS4xNjQ3NjQ0LDEzLjU4MTU1ODJjMS42MTYzMzMtMC44NTUyMDU1LDUuNjA3MDU1Ny0wLjc3MTg5NzMsNS45NzYwNTEzLTAuNzIyNTQ5NA0KCQkJCQljMC4xODYzMzI3LDAuMDI0OTg5MSwwLjQ1NTY1OCwwLjE1OTE5NCwwLjQ1MjI3ODEsMC40MjE0NDJjLTAuMDEyMzU5NiwzLjQ1MDQ4OS00LjcyNDk5MDgsMy45MTUxMTczLTYuNTI5NTE4MSwyLjcyNzMwODMNCgkJCQkJYy0wLjM3Njk5MTMtMC4yNDgzNDgyLTAuNjE1MTY1Ny0wLjY5NDE4MDUtMC42MzA4OTc1LTEuMDkwNjAxOQ0KCQkJCQlDNzguNDE5NjkzLDE0LjMzMDk2MTIsNzguNjIwNTU5NywxMy44NjY2NDc3LDc5LjE2NDc2NDQsMTMuNTgxNTU4MnogTTc3LjA2NTYxMjgsMTguMjIyOTIxNA0KCQkJCQljMi4yMTM2MTU0LDEuNTc2ODM5NCw2LjMzMDgyNTgsMS4xOTQ2MDMsOC4yMDU5OTM3LTAuNDQ1NDg2MWMwLjIyNzY4NC0wLjE5OTMxNDEsMC40OTExNjUyLTAuMDM1NzkzMywwLjU2NDU5MDUsMC4xOTc0NTI1DQoJCQkJCWMwLjE4NDQ5NCwwLjU3NjYyNTgsMC40NDQ4Nzc2LDAuNzEzODkzOSwxLjAxOTY2ODYsMC43MTg1MzgzYzAuMjYzMTY4MywwLDEuMTcyNjgzNywwLDEuMTcyNjgzNywwDQoJCQkJCWMwLjcwOTU5NDcsMCwwLjcxNDIwMjktMC43MTg1MzgzLDAuNzA5NTk0Ny0wLjcxODUzODNsMC4wMDM2OTI2LTcuNDE0MzUxNQ0KCQkJCQljMC4wMDA5MTU1LTQuMDMxMDkzMS0zLjc1ODk3OTgtNS4xMDE2NjQxLTYuNjQyNDE3OS01LjEwMTY2NDFjLTMuMjIzNDAzOSwwLjAwNDMyNzgtNS4zMzA1ODE3LDEuMjI3OTAxLTYuMzU4NTk2OCwzLjcxNzk0OTQNCgkJCQkJYy0wLjEwNDI1NTcsMC4yNTI5OTE3LDAuMTk2ODQ2LDAuNTU2ODc2MiwwLjQ1NDEzMjEsMC41NTY4NzYybDIuMTk5NzQ1MiwwLjAwNzQyNzINCgkJCQkJYzAuMzc2Mzk2MiwwLDAuNzUzNDE4LTAuMzE5MDIwMywwLjg2NTczMDMtMC41MDQ3NTIyYzAuNTcxOTc1Ny0wLjk1NzYyODMsMS40OTYzMTUtMS4zMTQyNzQzLDMuMjMxNDIyNC0xLjMxNDI3NDMNCgkJCQkJYzEuOTE4OTkxMSwwLDIuNDI0MDI2NSwwLjQyNjM3MTEsMy4wNDQ0NjQxLDEuMzE0Mjc0M2MwLjM5OTgzMzcsMC41Njk1MTYyLTAuMTM5NzYyOSwxLjE2MzczNzMtMC40NDcwMjkxLDEuMTc5MTU0NA0KCQkJCQljLTQuNjIxOTMzLDAuMjM3NTc0Ni01LjQwNjE4MTMsMC40MDUzOTM2LTYuNjY1NTgwNywwLjYwOTMyMjVjLTEuODIzMDQzOCwwLjI4NjkyMTUtMy4yMTYyOTMzLDIuMDUxNjcyLTMuMjAzMzQ2MywzLjg5MjMwNzMNCgkJCQkJQzc1LjIyMDM1OTgsMTYuMTIwNjcwMyw3NS43ODQzMTcsMTcuMzE1ODcwMyw3Ny4wNjU2MTI4LDE4LjIyMjkyMTR6IE02MS4yNDYyOTU5LDE5LjE1NDk2MDYNCgkJCQkJYzUuNzExNjIwMywwLDguMTAzODU1MS0zLjcwNDM5NzIsOC4wOTkyMzkzLTYuODQ0ODA2N2MtMC4wMDM0MTAzLTMuMDA1Mjg4MS0yLjQwMzY3MTMtNi44NDY5NTM5LTguMTQ3OTg3NC02Ljg0Njk1MzkNCgkJCQkJYy01LjczNTY5MTEtMC4wMDQzMjc4LTguMTMzODA4MSwzLjgzMDU3NjQtOC4xMzM4MDgxLDYuODUxNTk1NA0KCQkJCQlDNTMuMDYzNzM5OCwxNS41MTEwMzEyLDU1LjQ4NjUzMDMsMTkuMTU0OTYwNiw2MS4yNDYyOTU5LDE5LjE1NDk2MDZ6IE02MS4yNDYyOTU5LDE2LjcwMTkzNjcNCgkJCQkJYy0zLjMzOTEyNjYsMC00Ljg2ODEzMzUtMi40NzQzNDYyLTQuODY4MTMzNS00LjM3MTcyMTNjMC0xLjg5NDYyNjYsMS41OTk5NjQxLTQuMzk3MDI4LDQuODIwNjE3Ny00LjM5NzAyOA0KCQkJCQljMy4yMjAwMjAzLDAsNC44MzE3MDcsMi40ODY5ODQzLDQuODMxNzA3LDQuMzgxNjA4QzY2LjAzMDQ4NzEsMTQuMjMxOTE4Myw2NC40NTM5NjQyLDE2LjcwMTkzNjcsNjEuMjQ2Mjk1OSwxNi43MDE5MzY3eg0KCQkJCQkgTTM5LjM0MDE2OCwxMS4zNDI2MzcxYy0wLjAwMTU0ODgsMS42NjUwNzcyLDAuMDAzMDk3NSw1LjQ1MjE1MTMsMC4wMDMwOTc1LDYuNjI3MjkxNw0KCQkJCQljMCwwLjcxNzMzNjctMC43MTY5OTE0LDAuNzEzOTI2My0wLjcxNjk5MTQsMC43MTM5MjYzaC0xLjYwMjQ1OWMwLDAtMC43MTgwOTM5LDAuMDA5NTcxMS0wLjcyMzE4MjctMC43MTM5MjYzDQoJCQkJCUwzNi4zMDM3MywxLjQ4Nzg5OTJjMC0wLjcxNDIwOSwwLjcxMzkyNDQtMC43MTQyMDksMC43MTM5MjQ0LTAuNzE0MjA5aDEwLjM5MzU0NzENCgkJCQkJYzIuMzUxMzg3LDAsNS4wMzIyNTMzLDEuNjIwOTczNiw1LjAzMjI1MzMsNC45Mjg5MTY5YzAsMS42MDg2MjExLTAuOTIwOTE3NSwzLjA5MzIxMDItMi4yMTYyMzYxLDMuOTk4Mzk1DQoJCQkJCWMtMC4xMDQyODYyLDAuMDY5NzI1LTAuMTg0MzQxNCwwLjIxMDEyMTItMC4xMzM5MTg4LDAuMjQ4NjYzOWMwLjg4NjU0MzMsMC42OTg1MDczLDAuODk3MTkwMSwxLjI2OTI1NTYsMS4yMDk1NDksMi40NjgxNTQ5DQoJCQkJCWMwLjU2MjI3ODcsMi4xNzA3NDM5LDAuNjI5MDkzMiw0LjA2MDEyNjMsMS40ODM4MjU3LDUuODc5MTUzM2MwLjA2MDAyODEsMC4xMjUyNjEzLTAuMDg3MTYyLDAuMzg2ODgwOS0wLjI4MTY3NzIsMC4zODY4ODA5DQoJCQkJCWwtMi4wNzAxNTIzLDAuMDA0OTI2N2MtMC42Nzk4MzYzLDAtMS4wNTE5MDI4LTAuMzIyMzk5MS0xLjE4MDg2MjQtMC43MTg4NTMNCgkJCQkJYy0wLjc0MzUyNjUtMi4yNzA3MDE0LTAuMjMxMDk4Mi00LjQ3MjI4MDUtMS43Nzg0NjE1LTYuNjI3MjkxN2MtMC4zNjMyODEyLTAuNTA1OTgzNC0xLjE2NjA0MjMtMC43MTQyMDg2LTIuMTAzOTU4MS0wLjcxNDIwODYNCgkJCQkJaC01LjMxNDY4OTZDNDAuMDU1NDgxLDEwLjYyODQyODUsMzkuMzQzMjY1NSwxMC42Mjg0Mjg1LDM5LjM0MDE2OCwxMS4zNDI2MzcxeiBNNDYuMzk4NzkyMyw4LjI1MDk3NTYNCgkJCQkJYzAsMC4wMDMwNjQyLDIuNzg4ODQ4OSwwLjAwNzcwODUsMi43ODg4NDg5LTIuNTQ4MzY4NWMwLTIuNTU0NTU5Ny0yLjc4ODg0ODktMi41NTk0ODgzLTIuNzg4ODQ4OS0yLjU1OTQ4ODNoLTYuMzQxOTE4OQ0KCQkJCQljLTAuNzEzNjA3OCwwLTAuNzEzNjA3OCwwLjcxODg1MzItMC43MTM2MDc4LDAuNzE4ODUzMnMtMC4wMDQ2NDYzLDIuNzk1MTY3NywwLDMuNjczMjEyMw0KCQkJCQljMCwwLjcxODg1NTQsMC43NTM0MTQyLDAuNzE4ODU1NCwwLjcxMzYwNzgsMC43MTg4NTU0TDQ2LjM5ODc5MjMsOC4yNTA5NzU2eiIvPg0KCQkJPC9nPg0KCQkJPGc+DQoJCQkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTI5LjMzMjc0MjcsOC42Mzc4NTU1SDExLjc4OTA4MjVjLTIuNjAxMjg1LDAtNC40MzA5NTc4LDEuOTk5ODI5My00LjQzMDk1NzgsNC4zNDc5NjI0DQoJCQkJCWMwLDIuMzQzMjA3NCwxLjkzOTIwNDIsNC4zOTY3MTIzLDQuNDMwOTU3OCw0LjM5NjcxMjNjMi41Njg5MDMsMCwyMS40NTQxMzU5LDAsMjEuNDU0MTM1OSwwdjEuMzAxMzI0OA0KCQkJCQljMCwwLTE4LjIxOTEzOTEsMC0yMS40NzU3MDk5LDBjLTMuNDU2MjA3MywwLTUuNzgwNzQ0Ni0yLjY0NTIzMTItNS43ODA3NDQ2LTUuNjg3MjMwMQ0KCQkJCQljMC0zLjA0MjYzMDIsMi4zMzUwMjQ4LTUuNjc0MzA3OCw1Ljc3MTQ4NTMtNS42NzQzMDc4YzQuNjA1NDEyNSwwLDE2LjIyMzc5MywwLDE2LjIyMzc5MywwbDAsMFY1LjU0NjQ3NzhINS45ODY3NjN2MTMuMTM3Mzc2OA0KCQkJCQlINC41NDI0MjIzVjQuMjMwOTcwOWgyNC43OTAzMjE0VjguNjM3ODU1NXoiLz4NCgkJCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTAuNDM5OTMsMTUuMjM4MDA5NWgyMi44MDMyODc1VjEzLjkyNTI1MkgxMS43ODkwODI1di0xLjc3NzY3MThsMCwwYzAsMCwxMi43OTU3MDQ4LDAsMTYuMjI4NTk5NSwwDQoJCQkJCWMzLjQzNjQyODEsMCw1Ljc3MTI5NzUtMi42Mjk4NDQ3LDUuNzcxMjk3NS01LjY3MzM5MThjMC0zLjA0MjkxNTMtMi4zOTUxNzk3LTUuNzAwNDk4MS01Ljg1MjYxOTItNS43MDA0OTgxDQoJCQkJCWMtMy40NTY5MzIxLDAtMjYuOTM2MzU5NCwwLTI2LjkzNjM1OTQsMHYxNy45MTAxNjM5aDEuNDQ2MDQ2NlYyLjA5MTA2MTFjMCwwLDIzLjA0Mjg1MjQsMCwyNS41MzU5OTU1LDANCgkJCQkJYzIuNDk3OTE1MywwLDQuNDQ2ODQ3OSwyLjA1MTk1NjcsNC40NDY4NDc5LDQuMzk2NzExOGMwLDIuMzQ1MDcwOC0xLjg0Mzg4NzMsNC4zNDQyNjg4LTQuNDQ2ODQ3OSw0LjM0NDI2ODgNCgkJCQkJYy0yLjYwMDY4NTEsMC0xNy41NDIxMTI0LDAtMTcuNTQyMTEyNCwwVjE1LjIzODAwOTV6Ii8+DQoJCQk8L2c+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg=="
+                                    class="w-100" alt=""></a>
+                        </div>
+                        <div class="nav">
+                            <ul>
+                                <li class="main">
+                                    <a href="#">Products</a>
+                                    <div class="dropdown">
+                                        <div class="container-1">
+                                            <div class="container-2">
+                                                <div class="row justify">
+                                                    <a href="#">
+                                                        <ul>
+                                                            <li class="first"><a href="#">Pianos <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Organs <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Synthesizers <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Keyboards <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Guitar & Bass <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Drums & Percussion <i class="fas fa-chevron-right"></i></a></li>
+                                                        </ul>
+                                                    </a>
+                                                    <a href="#">
+                                                        <ul>
+                                                            <li class="first"><a href="#">Production <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Amplifiers <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">AIRA & DJ <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Pro Audio <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Pro Video <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Accessories <i class="fas fa-chevron-right"></i></a></li>
+                                                        </ul>
+                                                    </a>
+                                                    <div class="cardp">
+                                                        <a href="#">
+                                                            <figure>
+                                                                <img src="https://static.roland.com/assets/promos/png/menu_aerophone_go.png" class="w-100" alt="">
+                                                            </figure>
+                                                            <div class="cdesc">
+                                                                <h4>Aerophone GO</h4>
+                                                                <p>Explore the Inspirational World of Wind Instruments</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="cardp">
+                                                        <a href="#">
+                                                            <figure>
+                                                                <img src="https://static.roland.com/assets/promos/png/menu_vt-4.png" class="w-100" alt="">
+                                                            </figure>
+                                                            <div class="cdesc">
+                                                                <h4>VT-4</h4>
+                                                                <p>The VT-4 is an effect processor for the instrument inside us all—the human voice.</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main">
+                                    <a href="#">Community</a>
+                                    <div class="dropdown">
+                                        <div class="container-1">
+                                            <div class="container-2">
+                                                <div class="row justify">
+                                                    <a href="#">
+                                                        <ul>
+                                                            <li class="first"><a href="#">Facebook <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Youtube <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Worldwide Social Network <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Roland.Spotlight <i class="fas fa-chevron-right"></i></a></li>
+                                                        </ul>
+                                                    </a>
+                                                    <div class="cardp">
+                                                        <a href="#">
+                                                            <figure>
+                                                                <img src="https://static.roland.com/assets/promos/png/menu_facebook.png" class="w-100" alt="">
+                                                            </figure>
+                                                            <div class="cdesc">
+                                                                <h4>Facebook</h4>
+                                                                <p>Roland Global Official Fan Page. Stay up to date with Roland news, artists, promotions, events, and more.</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="cardp">
+                                                        <a href="#">
+                                                            <figure>
+                                                                <img src="https://static.roland.com/assets/promos/png/menu_youtube.png" class="w-100" alt="">
+                                                            </figure>
+                                                            <div class="cdesc">
+                                                                <h4>YouTube Channel</h4>
+                                                                <p>This channel provides information of the Roland's best quality electronic musical instruments. Provides an overview of key features, functions and operational tips.</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="cardp">
+                                                        <a href="#">
+                                                            <figure>
+                                                                <img src="https://static.roland.com/assets/promos/png/menu_social_media.png" class="w-100" alt="">
+                                                            </figure>
+                                                            <div class="cdesc">
+                                                                <h4>Worldwide Social Network</h4>
+                                                                <p>Welcome to our global family. The Roland Worldwide Social Network keeps you connected to the latest products, exciting events, and much more.</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main">
+                                    <a href="#">Support</a>
+                                    <div class="dropdown">
+                                        <div class="container-1">
+                                            <div class="container-2">
+                                                <div class="row justify">
+                                                    <a href="#">
+                                                        <ul class="last">
+                                                            <li class="first"><a href="#">Updates & Drivers <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Owner's Manuals <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Support Documents <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Quick Start Video <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Support News <i class="fas fa-chevron-right"></i></a></li>
+                                                            <li><a href="#">Legacy Product Info <i class="fas fa-chevron-right"></i></a></li>
+                                                        </ul>
+                                                    </a>
+                                                    <div class="cardp">
+                                                        <a href="#">
+                                                            <figure>
+                                                                <img src="https://static.roland.com/assets/promos/jpg/menu_support.jpg" class="w-100" alt="">
+                                                            </figure>
+                                                            <div class="cdesc">
+                                                                <h4>Support by Product</h4>
+                                                                <p>Get the latest updates/drivers, owner's manuals, and support documents for your product.</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="cardp">
+                                                        <a href="#">
+                                                            <figure>
+                                                                <img src="https://static.roland.com/assets/promos/jpg/menu_quickstart.jpg" class="w-100" alt="">
+                                                            </figure>
+                                                            <div class="cdesc">
+                                                                <h4>Quick Start</h4>
+                                                                <p>This channel provides instructions of the Roland's electronic musical instruments and equipment.</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main"><a href="#">Articles</a></li>
+                                <li class="main">
+                                    <a href="#">Company</a></li>
+                                <li class="link">
+                                    <a href="#"><input type="text" class="search-1"><i class="fas fa-search"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <div class="container">
+            <div class="container-1">
+                <div id="banner">
+                    <div class="slider">
+                        <a href="#">
+                            <img src="https://static.roland.com/assets/promos/jpg/billboard_hybrid_drums_2019.jpg" class="w-100" alt="">
+                            <div class="desc">
+                                <h1>Hybrid Drums</h1>
+                                <small>Your Sound. No Limits.</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slider">
+                        <a href="#">
+                            <img src="https://static.roland.com/assets/promos/jpg/billboard_hp700_series.jpg" class="w-100" alt="">
+                            <div class="desc">
+                                <h1>HP700 Series</h1>
+                                <small>Digital Piano</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slider">
+                        <a href="#">
+                            <img src="https://static.roland.com/assets/promos/jpg/billboard_bc_tc-sc.jpg" class="w-100" alt="">
+                            <div class="desc">
+                                <h1>BC TC-SC</h1>
+                                <small>Blues Cube Sparkle Clean Tone Capsule</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slider">
+                        <a href="#">
+                            <img src="https://static.roland.com/assets/promos/jpg/billboard_fp-10.jpg" class="w-100" alt="">
+                            <div class="desc">
+                                <h1>FP-10</h1>
+                                <small>Digital Piano</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slider">
+                        <a href="#">
+                            <img src="https://static.roland.com/assets/promos/jpg/billboard_wakuwaku.jpg" class="w-100 last" alt="">
+                            <div class="desc">
+                                <h1>Thrill and Excitement</h1>
+                                <small>The Thrill and Excitement of your Creative Experiences</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container-1">
+                <section id="section-1">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="card-1">
+                                    <figure class="image">
+                                        <img src="https://static.roland.com/assets/promos/jpg/promo_fp_piano_every_day.jpg" class="w-100" alt="">
+                                        <figcaption>
+                                            <h5>
+                                                <small>Featured Product</small> Piano Every Day
+                                            </h5>
+                                            <p>An App That Makes Your Piano Life Fun and Fulfilling</p>
+                                            <span><i class="fas fa-chevron-right"></i> Find Out More</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="card-1">
+                                    <figure class="image">
+                                        <img src="https://static.roland.com/assets/promos/jpg/promo_fp_roland_new_products.jpg" class="w-100 " alt=" ">
+                                        <figcaption>
+                                            <h5>
+                                                <small>Featured Product</small> Roland New Products
+                                            </h5>
+                                            <p>Check out the new products from roland</p>
+                                            <span><i class="fas fa-chevron-right "></i> Find Out More</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="card-1 ">
+                                    <figure class="image ">
+                                        <img src="https://static.roland.com/assets/promos/jpg/promo_fp_e-x30.jpg " class="w-100 " alt=" ">
+                                        <figcaption>
+                                            <h5>
+                                                <small>Featured Product</small> EX-30 Arranger Keyboard
+                                            </h5>
+                                            <p>Created by Roland, a brand that’s acclaimed by professionals around the world for its reliability, quality, and expression, the E-X30 is the perfect first instrument for any aspiring young player.</p>
+                                            <span><i class="fas fa-chevron-right "></i> Find Out More</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section id="section-2">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="card-2">
+                                    <figure class="image">
+                                        <img src="https://static.roland.com/assets/promos/jpg/promo_fv_hp700_series_intro.jpg" class="w-100 " alt=" ">
+                                        <i class="far fa-play-circle"></i>
+                                        <figcaption>
+                                            <h5>
+                                                <small>Featured Video</small>Introducing the Roland HP700 Series Piano
+                                            </h5>
+                                            <p>The Roland HP700 series comes in two piano models—HP704 and HP702—in a range of finishes to suit the style of your room and home. Whatever your reasons for owning a piano, the HP700 series can help fulfil them—bringing
+                                                style, culture, and music into the heart of your home.</p>
+                                            <span><i class="fas fa-chevron-right "></i> Find Out More</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="card-2">
+                                    <figure class="image">
+                                        <img src="https://static.roland.com/assets/promos/jpg/promo_fv_vt-4_ermhoi.jpg" class="w-100 " alt=" ">
+                                        <i class="far fa-play-circle"></i>
+                                        <figcaption>
+                                            <h5>
+                                                <small>Featured Video</small> VT-4 Voice Transformer Performance by ermhoi and Teppei Kitano
+                                            </h5>
+                                            <p>In this video, vocalist ermhoi and producer Teppei Kitano (on the Roland TR-8S) show how the VT-4 can dynamically shift pitch, formant and effects in one performance.</p>
+                                            <span><i class="fas fa-chevron-right "></i> Find Out More</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="card-2">
+                                    <figure class="image">
+                                        <img src="https://static.roland.com/assets/promos/jpg/promo_fv_303day_2019.jpg" class="w-100 " alt=" ">
+                                        <i class="far fa-play-circle"></i>
+                                        <figcaption>
+                                            <h5>
+                                                <small>Featured Video</small> 303 DAY: DJ Pierre and the Roland TB-303
+                                            </h5>
+                                            <p>Today on #303DAY, we celebrate the iconic silver box that defined the genre of acid house—the Roland TB-303 Bassline Synthesizer.</p>
+                                            <span><i class="fas fa-chevron-right "></i> Find Out More</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section id="section-3">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="card-3">
+                                    <figure class="image">
+                                        <img src="https://static.roland.com/assets/images/articles/thumbnails/tr_serato_sync_tn.png" class="w-100 " alt=" ">
+                                        <figcaption>
+                                            <h5>
+                                                <small>Looking For</small>Roland TR Drum Machines Sync with Serato DJ Pro
+                                            </h5>
+                                            <p>The Serato x Roland TR-SYNC update brings the power of Roland’s iconic drum machines to your DJ setup. Simply connect your Roland TR drum machine to Serato DJ Pro and they’ll sync to the same BPM.</p>
+                                            <span><i class="fas fa-chevron-right "></i> Find Out More</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="card-3">
+                                    <figure class="image">
+                                        <img src="https://static.roland.com/assets/promos/jpg/promo_fc_hybrid_drums.jpg" class="w-100 " alt=" ">
+                                        <figcaption>
+                                            <h5>
+                                                <small>Looking For</small>Hybrid Drums
+                                            </h5>
+                                            <p>Hybrid drums: take the raw power of acoustic drums, add the potential of electronics and start playing a drum kit that gives you the best of both worlds.</p>
+                                            <span><i class="fas fa-chevron-right "></i> Find Out More</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="card-3">
+                                    <figure class="image">
+                                        <img src="https://static.roland.com/assets/promos/jpg/promo_fc_rolandcloud.jpg" class="w-100 " alt=" ">
+                                        <figcaption>
+                                            <h5>
+                                                <small>Looking For</small> Roland Cloud
+                                            </h5>
+                                            <p>Roland Cloud represents a cloud-based suite of high-fidelity instruments, connected services and software for modern music creators and producers.</p>
+                                            <span><i class="fas fa-chevron-right "></i> Find Out More</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section id="section-4">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <figure class="image">
+                                    <img src="https://static.roland.com/assets/images/products/categories/rct_pianos.jpg" class="w-100" alt="">
+                                </figure>
+                                <div class="desc1">
+                                    <h2><small>pianos</small></h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure class="image">
+                                    <img src="https://static.roland.com/assets/images/products/categories/rct_organs.jpg" class="w-100" alt="">
+                                </figure>
+                                <div class="desc1">
+                                    <h2><small>organs</small></h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure class="image">
+                                    <img src="https://static.roland.com/assets/images/products/categories/rct_synthesizers.jpg" class="w-100" alt="">
+                                </figure>
+                                <div class="desc1">
+                                    <h2><small>synthesizers</small></h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure class="image">
+                                    <img src="https://static.roland.com/assets/images/products/categories/rct_keyboards.jpg" class="w-100" alt="">
+                                </figure>
+                                <div class="desc1">
+                                    <h2><small>keyboards</small></h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure class="image">
+                                    <img src="https://static.roland.com/assets/images/products/categories/rct_guitar_bass.jpg" class="w-100" alt="">
+                                </figure>
+                                <div class="desc1">
+                                    <h2><small>guitar & bass</small></h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure class="image">
+                                    <img src="https://static.roland.com/assets/images/products/categories/rct_v-drums.jpg" class="w-100" alt="">
+                                </figure>
+                                <div class="desc1">
+                                    <h2><small>drums & percussions</small></h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure class="image">
+                                    <img src="https://static.roland.com/assets/images/products/categories/rct_production.jpg" class="w-100" alt="">
+                                </figure>
+                                <div class="desc1">
+                                    <h2><small>production</small></h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure class="image">
+                                    <img src="https://static.roland.com/assets/images/products/categories/rct_amplifiers.jpg" class="w-100" alt="">
+                                </figure>
+                                <div class="desc1">
+                                    <h2><small>amplifiers</small></h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure class="image">
+                                    <img src="https://static.roland.com/assets/images/products/categories/rct_aira.jpg" class="w-100" alt="">
+                                </figure>
+                                <div class="desc1">
+                                    <h2><small>aira & dj</small></h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure class="image">
+                                    <img src="https://static.roland.com/assets/images/products/categories/rct_pro_audio.jpg" class="w-100" alt=" ">
+                                </figure>
+                                <div class="desc1">
+                                    <h2><small>pro audio</small></h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure class="image">
+                                    <img src="https://static.roland.com/assets/images/products/categories/rct_pro_video.jpg" class="w-100" alt=" ">
+                                </figure>
+                                <div class="desc1">
+                                    <h2><small>pro video</small></h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure class="image">
+                                    <img src="https://static.roland.com/assets/images/products/categories/rct_accessories.jpg" class="w-100" alt=" ">
+                                </figure>
+                                <div class="desc1">
+                                    <h2><small>accessories</small></h2>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section id="prefooter">
+                    <a href="#">
+                        <i class="fas fa-chevron-up"></i>
+                    </a>
+                </section>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container-1">
+                <footer id="footer">
+                    <div class="row justify">
+                        <div class="info">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-chevron-right"></i> <small>International Page</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-chevron-right"></i> <small>Roland Content Store</small>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row justify">
+                        <div class="social">
+                            <ul class="icons">
+                                <li>
+                                    <a href="#" title="Roland Corporation">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Roland Channel">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Roland Corporation">
+                                        <i class="fab fa-soundcloud"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="icons-right">
+                                <li>
+                                    <a href="#">Roland Account Service</a>
+                                </li>
+                                <li>
+                                    <a href="#">Change Region <i class="fas fa-globe-americas"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <nav id="lists">
+                        <div class="row justify">
+                            <section class="list-1">
+                                <h3><a href="#">products</a></h3>
+                                <ul>
+                                    <li><a href="#">Featured Products</a></li>
+                                    <li><a href="#">Pianos</a></li>
+                                    <li><a href="#">Organs</a></li>
+                                    <li><a href="#">Synthesizers</a></li>
+                                    <li><a href="#">Keyboards</a></li>
+                                    <li><a href="#">Guitar & Bass</a></li>
+                                    <li><a href="#">Drums & Percussion</a></li>
+                                    <li><a href="#">Production</a></li>
+                                    <li><a href="#">Amplifiers</a></li>
+                                    <li><a href="#">AIRA & DJ</a></li>
+                                    <li><a href="#">Pro Audio</a></li>
+                                    <li><a href="#">Pro Video</a></li>
+                                    <li><a href="#">Accessories</a></li>
+                                    <li><a href="#">Apps</a></li>
+                                </ul>
+                            </section>
+                            <section class="list-1">
+                                <h3><a href="#">community</a></h3>
+                                <ul>
+                                    <li><a href="#">Facebook</a></li>
+                                    <li><a href="#">Youtube</a></li>
+                                    <li><a href="#">Worldwide Social Network</a></li>
+                                    <li><a href="#">Roland.Spotlight</a></li>
+                                </ul>
+                            </section>
+                            <section class="list-1">
+                                <h3><a href="#">support</a></h3>
+                                <ul>
+                                    <li><a href="#">Updates & Drivers</a></li>
+                                    <li><a href="#">Owner's Manuals</a></li>
+                                    <li><a href="#">Support Documents</a></li>
+                                    <li><a href="#">Synthesizers</a></li>
+                                    <li><a href="#">Quick Start Video</a></li>
+                                    <li><a href="#">Knowledge Base</a></li>
+                                    <li><a href="#">Support News</a></li>
+                                    <li><a href="#">Legacy Product Info</a></li>
+                                </ul>
+                            </section>
+                            <section class="list-1">
+                                <h3><a href="#">articles</a></h3>
+                                <ul>
+                                    <li><a href="#">Pianos</a></li>
+                                    <li><a href="#">Synthesizers</a></li>
+                                    <li><a href="#">Drums & Percussion</a></li>
+                                    <li><a href="#">Production</a></li>
+                                    <li><a href="#">Amplifiers</a></li>
+                                    <li><a href="#">AIRA & DJ</a></li>
+                                    <li><a href="#">Events</a></li>
+                                </ul>
+                            </section>
+                            <section class="list-1">
+                                <h3><a href="#">company</a></h3>
+                                <ul>
+                                    <li><a href="#">Company Overview</a></li>
+                                    <li><a href="#">Company Strategy</a></li>
+                                    <li><a href="#">Financial Information</a></li>
+                                    <li><a href="#">Press Releases</a></li>
+                                    <li><a href="#">History</a></li>
+                                    <li><a href="#">Compilance Guidelines</a></li>
+                                    <li><a href="#">Intellectual Property</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </nav>
+                    <div class="row justify">
+                        <div id="fimages">
+                            <ul>
+                                <li>
+                                    <a href="#" class="boss">
+                                        <img src="https://static.roland.com/global/images/promo_boss.jpg" class="w-100" alt="">
+                                        <h3> <img src="https://static.roland.com/global/images/promo_boss_title.png" class="w-100" alt=""></h3>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://static.roland.com/global/images/promo_v-moda.png" class="w-100" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row justify">
+                        <div id="legal">
+                            <ul class="tnc">
+                                <li><a href="#">Privacy Policy |</a></li>
+                                <li><a href="#">Terms of Use |</a></li>
+                                <li><a href="#">Worldwide Social Network</a></li>
+                            </ul>
+                            <ul class="cr">
+                                <li><a href="#">Copyright <i class="far fa-copyright"></i>2019 Roland Corporation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        </div>
+</body>
+
+</html>
